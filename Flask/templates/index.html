@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Face Recognition</title>
+    <style>
+        body {
+            background-color: #F6F4EB;
+            color: #4682A9;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            display: flex; 
+            flex-direction: column; 
+            height: 100vh;
+            justify-content: space-between; 
+        }
+        h1, h2, h3, p {
+            font-size: 25px; /* Increase text size by 10% */
+        }
+        h1 {
+            background-color: #91C8E4;
+            padding: 22px; /* Increased by 10% */
+            margin: 0;
+            color: #F6F4EB;
+        }
+        h2 {
+            background-color: #749BC2;
+            padding: 16.5px; /* Increased by 10% */
+            margin: 0;
+            color: #F6F4EB;
+        }
+        button {
+            background-color: #4682A9;
+            color: #F6F4EB;
+            font-size: 19.8px; /* Increased by 10% */
+            padding: 16.5px 33px; /* Increased by 10% */
+            margin: 11px; /* Increased by 10% */
+            cursor: pointer;
+            border: none;
+        }
+        button:hover {
+            background-color: #749BC2;
+        }
+        img {
+            display: block;
+            margin: 22px auto; /* Increased by 10% */
+            border: 3px solid #4682A9;
+            border-radius: 11px; /* Increased by 10% */
+            width: 330px; /* Increased by 10% */
+            height: 220px; /* Increased by 10% */
+        }
+        .info-section { 
+            padding: 11px; /* Increased by 10% */
+        }
+        .button-section {
+            padding: 11px; /* Increased by 10% */
+        }
+        .footer {
+            padding: 11px; /* Increased by 10% */
+            background-color: #91C8E4;
+        }
+    </style>
+</head>
+<body>
+    <h1>Attendance System</h1>
+    <h2>Please mark your attendance by clicking one of the model buttons</h2>
+
+    <img src="logo.png" width="300" height="200">
+
+    <div class="info-section">
+        <h3>How to Use</h3>
+        <p>Step 1: Click on a model button.</p>
+        <p>Step 2: Position your face in front of the camera.</p>
+    </div>
+
+    <div class="button-section">
+        <button onclick="useModel('simple_cnn')">Simple CNN</button>
+        <button onclick="useModel('complex_cnn')">Complex CNN</button>
+        <button onclick="useModel('vgg16')">VGG-16</button>
+        <button onclick="useModel('vgg19')">VGG-19</button>
+        <button onclick="useModel('resnet')">RESNET-V2</button>
+    </div>
+    
+    <div class="footer">
+        <p>B.Tech DATA SCIENCE</p>
+    </div>
+
+    <script src="/static/js/app.js"></script>
+</body>
+</html>
